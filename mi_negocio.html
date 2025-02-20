@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "description" content="Mi primera chamba">
+    <meta name = "keywords" content="css,font,img, js"> 
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Arpilleras, Mallas y EPPs</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .main-content {
+            width: 70%;
+        }
+        .box {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Barra lateral derecha */
+        .sidebar {
+            width: 25%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: auto; /* Altura automática según el contenido */
+            max-height: 400px; /* Límite máximo de altura */
+            overflow-y: auto; /* Añade una barra de desplazamiento si el contenido es largo */
+        }
+        .sidebar h3 {
+            margin-bottom: 20px;
+        }
+        .sidebar button {
+            background-color: #555;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        .sidebar button:hover {
+            background-color: #777;
+        }
+
+        /* Sección de Contacto */
+        .contact-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center; /* Centrado */
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto; /* Centrado horizontal */
+            text-align: center; /* Centrado del texto dentro del formulario */
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Asegura que los bordes no desborden el ancho */
+        }
+        .contact-form button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <h1>Mi Negocio: Venta de Arpilleras, Mallas y EPPs</h1>
+        <p>Tu solución confiable para materiales de calidad</p>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <!-- Cuadros de productos -->
+            <div class="box">
+                <h2>Arpilleras</h2>
+                <p>Venta de arpilleras de alta calidad para diversos usos, como embalaje, construcción y decoración.</p>
+            </div>
+            <div class="box">
+                <h2>Mallas</h2>
+                <p>Ofrecemos una amplia variedad de mallas para construcción, agricultura y otros proyectos industriales.</p>
+            </div>
+            <div class="box">
+                <h2>Costales</h2>
+                <p>Costales resistentes ideales para almacenamiento y transporte de productos agrícolas y otros materiales.</p>
+            </div>
+            <div class="box">
+                <h2>Malla Rashel</h2>
+                <p>Malla Rashel de alta resistencia, ideal para protección en construcciones y proyectos de ingeniería.</p>
+            </div>
+            <div class="box">
+                <h2>EPPs</h2>
+                <p>Equipos de protección personal de alta calidad para garantizar la seguridad en el trabajo.</p>
+            </div>
+
+            <!-- Sección de Contacto -->
+            <section class="contact-section">
+                <h2>Contacto</h2>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> contacto@tuprimernegocio.com</p>
+                    <p><strong>Teléfono:</strong> +51 989 898 989</p>
+                    <p><strong>Redes sociales:</strong> @tuprimernegocio</p>
+                </div>
+                <form class="contact-form">
+                    <h3>Envíanos un mensaje</h3>
+                    <input type="text" placeholder="Tu nombre" required>
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <textarea rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Barra lateral derecha -->
+        <div class="sidebar">
+            <h3>Opciones</h3>
+            <button onclick="showSection('about')">Nosotros</button>
+            <button onclick="showSection('vision-mission')">Visión y Misión</button>
+            <button onclick="showSection('products')">Productos</button>
+            <button onclick="showSection('contact')">Contacto</button>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2023 - Mi Negocio de Arpilleras, Mallas y EPPs. Todos los derechos reservados.</p>
+    </footer>
+
+    </body>
+</html>
